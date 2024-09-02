@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+   
+    <div class="first">
+        <h1>
+            Write simple programs that use variables and basic arithmetic operations
+        </h1>
+        <p id="c">
+ 
+         </p>
+         <p id="cc">
+
+         </p>
+    </div>
+    
+    <div class="second">
+        <h1>
+            Write programs using loops and conditional statements to solve simple problems
+        </h1>
+        <p id="loop">
+
+         </p>
+        
+    </div>
+
+    <div class="third">
+        <h1>
+            Create functions to perform tasks like calculations or string manipulations.
+   
+        </h1>
+
+        <p id="factorial">
+
+        </p>
+        <br>
+        <p id="square">
+
+        </p>
+        <p id="manipulate">
+
+        </p>
+    </div>
+   
+    <div class="four">
+        <h1>
+            Work with objects and arrays to manage and manipulate data.
+
+        </h1>
+
+        <p id="fruit">
+
+        </p>
+
+        <p id="remove">
+
+        </p>
+        <p id="object">
+
+        </p>
+    
+         
+    </div>
+
+
+
+
+    <div class="five">
+        <h1>
+            Build a simple interactive webpage that responds to user input.
+
+        </h1>
+         <div >
+            <img src="img/pp3.jpg" alt=""    id="change">
+         </div>
+        <p>
+            <button onclick="myFunction()">Click me</button>
+        </p>
+        <p>
+            <input type="text" name="" id="data">
+            <button onclick="formm()">Click meee</button>
+            <h1 id="gre">
+
+            </h1>
+        </p>
+      
+     
+
+
+
+
+        <div>
+            <button onclick="hell()">
+                touch
+            </button>
+            <h1  id="hello">
+                HELLO WORLD IT IS 
+            </h1>
+        </div>
+    </div>
+    <div class="six">
+        <h1>
+            Create functions that use closures and callbacks for more complex behavior
+        </h1>
+        <p id="closure">
+
+        </p>
+        <p id="closuree">
+
+        </p>
+    </div>
+    <div class="seven">
+        Build small applications using classes and inheritance.
+
+        <p id="cla"></p>
+
+        </p>
+    </div>
+   
+</body>
+<script>
+    var c = document.getElementById("c");
+    var cc = document.getElementById("cc");
+ 
+    var a= 2;
+    var b=2;
+    var d= a+b;
+    var dd = a ** b;
+    c.innerHTML = d;
+    cc.innerHTML = dd;
+  
+
+
+
+   
+     
+    var loop= document.getElementById("loop");
+   let arr = [2,5,10,12,20];
+   let large = arr[0];
+   function  problem( ) {
+    for (let index = 0; index < arr.length; index++) {
+     if ( arr[index] > large) {
+         large = arr[index];
+         
+     }
+     
+      
+     
+    
+    }
+    return large;
+    
+   }
+   loop.innerHTML= problem(arr);
+   
+
+  
+   var factoriall = document.getElementById("factorial");
+   var  square = document.getElementById("square");
+
+    let n = 5;
+    function factorial(n) { 
+    if (n === 0) { 
+        return 1; 
+    } 
+    else { 
+        return n * factorial( n - 1 ); 
+    } 
+   
+} 
+factoriall.innerHTML=(factorial(n));
+ 
+let e= 100;
+let g=e*e;
+ square.innerHTML= g;
+
+ var manipulate= document.getElementById("manipulate");
+
+ const name = 'hello';
+ name1 = name + ' ' + 'world';
+  manipulate.innerHTML= name1;
+
+ 
+
+  let text = 'lorem ipsum is good text';
+  let part = text.slice(2);
+  manipulate.innerHTML= part;
+
+
+
+  var  fruit = document.getElementById("fruit");
+  var   remove= document.getElementById("remove");
+
+  let fruits = ["apple", "orange"];
+
+ 
+fruits.push("grapes");
+fruits.unshift("banana");
+fruits.shift();
+ fruits.pop();
+
+   fruit.innerHTML= fruits;
+    
+  
+
+ 
+
+
+
+  let rem = [ 1,2,3,4,5,65,7,8,9,10,11,12,13,14,15,16];
+
+
+  rem.shift();
+ rem.pop();
+  remove.innerHTML= rem;
+
+  var  object = document.getElementById("object");
+  var person = {
+   name : 'john',
+   school : 'public school',
+   age : 12,
+   gender : 'male',
+  }
+ 
+  object.innerHTML = person.name + "<br>" + person.school + "<br>" + person.age + "<br>" + person.gender;
+
+
+      
+ 
+  var change = document.getElementById("change") ;
+   
+   function  myFunction(params) {
+   if (change.src.includes("pp3.jpg") ) {
+    change.src =  'img/pp2.jpg';
+   } else {
+    change.src =  'img/pp3.jpg';
+   }
+
+
+  
+ 
+    }
+    
+    function  formm( ) {
+        var  data = document.getElementById("data").value ;
+        var   gre = document.getElementById("gre");
+        if ( data ) {
+            gre.innerHTML='greetings';
+           
+ 
+      } else {
+        gre.innerHTML='please enter the value'; 
+        // Ask the user to enter a name if the input is empty
+       }
+     
+    
+    }
+    var hello = document.getElementById("hello");
+    function  hell(params) {
+        hello.innerHTML = "hello world3333";  
+    }
+    
+
+//WebSockets
+ function name1(params) {
+    console.log("hello world");
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function foo() {
+    let b = 1;
+    function inner() {
+        return b;
+    }
+    return inner;
+}
+let get_func_inner = foo();
+
+console.log(get_func_inner());
+console.log(get_func_inner());
+console.log(get_func_inner());
+
+
+   
+
+
+ 
+
+
+ function greet(callback) {
+    console.log('hello zuniiiiiiiii');
+    callback();
+ 
+    
+ }
+
+
+ function sayGoodbye (params) {
+    console.log('hello samamammmmm');
+    
+ }
+ greet(sayGoodbye )
+
+
+
+
+ //closure
+  
+ //iife
+ //(function() {
+ // console.log('I am an IIFE!');
+//})();
+
+
+ 
+ 
+var closure = document.getElementById("closure");
+var closuree = document.getElementById("closuree");
+
+ 
+ 
+
+// Define `first` function with a callback parameter
+ 
+function  first(callback ) {
+    let count = 0;
+    return function  second(params) {
+        count++;
+        if (callback) {
+      callback(count);
+    }
+        return count;
+     }
+}
+const counter = first((currentCountt) => {
+    closuree.innerHTML = `Counter value: ${currentCountt}`;
+
+ 
+});
+closure.innerHTML = counter();
+closure.innerHTML = counter();
+closure.innerHTML = counter();
+closure.innerHTML = counter();
+
+
+ 
+
+
+ 
+ 
+ 
+
+
+  
+ 
+
+
+var cla = document.getElementById("cla") ;
+
+// Base class: Book
+  const book = {
+   title() {
+    console.log(`${this.title}`);
+    
+   }
+  };
+  const ebook = Object.create(book);
+  ebook.title = 'The Catcher in the Rye';
+  ebook.title;
+
+  
+</script>
+</html>
